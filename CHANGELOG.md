@@ -7,6 +7,28 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.8](https://github.com/ratatui-org/crates-tui/compare/v0.1.7...v0.1.8) - 2024-03-25
+
+### Fixed
+- restore bracketed paste in tui::restore ([#37](https://github.com/ratatui-org/crates-tui/pull/37))
+
+### Other
+- *(deps)* bump toml from 0.8.10 to 0.8.12 ([#50](https://github.com/ratatui-org/crates-tui/pull/50))
+- *(deps)* bump uuid from 1.7.0 to 1.8.0 ([#49](https://github.com/ratatui-org/crates-tui/pull/49))
+- *(deps)* bump color-eyre from 0.6.2 to 0.6.3 ([#47](https://github.com/ratatui-org/crates-tui/pull/47))
+- *(deps)* bump serde_with from 3.6.1 to 3.7.0 ([#43](https://github.com/ratatui-org/crates-tui/pull/43))
+- *(deps)* bump tokio-stream from 0.1.14 to 0.1.15 ([#44](https://github.com/ratatui-org/crates-tui/pull/44))
+- *(deps)* bump figment from 0.10.14 to 0.10.15 ([#45](https://github.com/ratatui-org/crates-tui/pull/45))
+- *(deps)* bump clap from 4.5.2 to 4.5.3 ([#46](https://github.com/ratatui-org/crates-tui/pull/46))
+- *(deps)* bump clap from 4.5.1 to 4.5.2 ([#41](https://github.com/ratatui-org/crates-tui/pull/41))
+- *(deps)* bump webbrowser from 0.8.12 to 0.8.13 ([#42](https://github.com/ratatui-org/crates-tui/pull/42))
+- *(deps)* bump chrono from 0.4.34 to 0.4.35 ([#40](https://github.com/ratatui-org/crates-tui/pull/40))
+- *(deps)* bump strum from 0.26.1 to 0.26.2 ([#39](https://github.com/ratatui-org/crates-tui/pull/39))
+- *(deps)* bump serde from 1.0.196 to 1.0.197 ([#38](https://github.com/ratatui-org/crates-tui/pull/38))
+- *(deps)* bump textwrap from 0.16.0 to 0.16.1 ([#36](https://github.com/ratatui-org/crates-tui/pull/36))
+- *(deps)* bump clap from 4.5.0 to 4.5.1 ([#35](https://github.com/ratatui-org/crates-tui/pull/35))
+- jm/refactor tui ([#33](https://github.com/ratatui-org/crates-tui/pull/33))
+
 ## [0.1.7](https://github.com/ratatui-org/crates-tui/compare/v0.1.6...v0.1.7) - 2024-02-12
 
 ### Other
