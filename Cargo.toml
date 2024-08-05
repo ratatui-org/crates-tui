@@ -20,11 +20,11 @@ eula = false
 better-panic = "0.3.0"
 cfg-if = "1.0.0"
 chrono = "0.4.38"
-clap = { version = "4.5.11", features = ["derive", "cargo", "wrap_help", "unicode", "string", "unstable-styles", "color"] }
+clap = { version = "4.5.13", features = ["derive", "cargo", "wrap_help", "unicode", "string", "unstable-styles", "color"] }
 color-eyre = "0.6.3"
 copypasta = "0.10.1"
 crates_io_api = "0.11.0"
-crossterm = { version = "0.27.0", features = ["serde", "event-stream"] }
+crossterm = { version = "0.28.1", features = ["serde", "event-stream"] }
 derive_deref = "1.1.1"
 directories = "5.0.1"
 figment = { version = "0.10.19", features = ["env", "toml", "yaml"] }
@@ -47,7 +47,7 @@ textwrap = "0.16.1"
 tokio = { version = "1.39.2", features = ["full"] }
 tokio-stream = "0.1.15"
 tokio-util = "0.7.11"
-toml = "0.8.16"
+toml = "0.8.19"
 tracing = "0.1.40"
 tracing-appender = "0.2.3"
 tracing-error = "0.2.0"
