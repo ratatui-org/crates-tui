@@ -117,11 +117,16 @@ impl App {
     }
 
     /// Runs the main loop of the application, handling events and actions
-    pub async fn run(&mut self, mut tui: Tui, mut events: Events) -> Result<()> {
+    pub async fn run(
+        &mut self,
+        mut tui: Tui,
+        mut events: Events,
+        query: Option<String>,
+    ) -> Result<()> {
         // uncomment to test error handling
         // panic!("test panic");
         // Err(color_eyre::eyre::eyre!("Error"))?;
-        self.tx.send(Action::Init)?;
+        self.tx.send(Action::Init { query })?;
 
         loop {
             if let Some(e) = events.next().await {
@@ -207,7 +212,7 @@ impl App {
         match action {
             Action::Quit => self.quit(),
             Action::KeyRefresh => self.key_refresh_tick(),
-            Action::Init => self.init()?,
+            Action::Init { ref query } => self.init(query)?,
             Action::Tick => self.tick(),
             Action::StoreTotalNumberOfCrates(n) => self.store_total_number_of_crates(n),
             Action::ScrollUp => self.scroll_up(),
@@ -282,8 +287,14 @@ impl App {
         self.search.update_search_table_results();
     }
 
-    fn init(&mut self) -> Result<()> {
-        self.summary.request()?;
+    fn init(&mut self, query: &Option<String>) -> Result<()> {
+        if let Some(query) = query {
+            self.search.search = query.clone();
+            let _ = self.tx.send(Action::SwitchMode(Mode::Search));
+            let _ = self.tx.send(Action::SubmitSearch);
+        } else {
+            self.summary.request()?;
+        }
         Ok(())
     }
 

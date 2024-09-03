@@ -28,7 +28,7 @@ async fn main() -> Result<()> {
 
     let tui = tui::init()?;
     let events = events::Events::new();
-    App::new().run(tui, events).await?;
+    App::new().run(tui, events, cli.query).await?;
     tui::restore()?;
     Ok(())
 }

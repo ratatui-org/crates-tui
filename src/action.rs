@@ -12,7 +12,7 @@ pub enum Action {
     Suspend,
     Resume,
     Quit,
-    Init,
+    Init { query: Option<String> },
     Refresh,
     NextTab,
     PreviousTab,

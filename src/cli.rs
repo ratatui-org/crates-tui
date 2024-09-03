@@ -45,6 +45,10 @@ const HELP_STYLES: Styles = Styles::styled()
 #[derive(Debug, Default, Parser, Serialize)]
 #[command(author, version = version(), about, long_about = None, styles = HELP_STYLES)]
 pub struct Cli {
+    /// Initial Query
+    #[arg(value_name = "QUERY")]
+    pub query: Option<String>,
+
     /// Print default configuration
     #[arg(long)]
     pub print_default_config: bool,
