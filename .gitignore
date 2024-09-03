@@ -1,2 +1,4 @@
 /target
 .data/*.log
+
+.direnv/
