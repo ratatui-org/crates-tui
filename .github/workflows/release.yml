@@ -113,7 +113,7 @@ jobs:
         run: ${{ matrix.install_dist }}
       # Get the dist-manifest
       - name: Fetch local artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           pattern: artifacts-*
           path: target/distrib/
@@ -164,7 +164,7 @@ jobs:
         run: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.9.0/cargo-dist-installer.sh | sh"
       # Get all the local artifacts for the global tasks to use (for e.g. checksums)
       - name: Fetch local artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           pattern: artifacts-*
           path: target/distrib/
@@ -209,7 +209,7 @@ jobs:
         run: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/download/v0.9.0/cargo-dist-installer.sh | sh"
       # Fetch artifacts from scratch-storage
       - name: Fetch artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           pattern: artifacts-*
           path: target/distrib/
@@ -246,7 +246,7 @@ jobs:
         with:
           submodules: recursive
       - name: "Download Github Artifacts"
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           pattern: artifacts-*
           path: artifacts
