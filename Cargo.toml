@@ -43,7 +43,7 @@ num-format = "0.4"
 ratatui = { version = "0.30.0", features = ["serde", "macros"] }
 serde = { version = "1", features = ["derive"] }
 serde_with = "3"
-strum = { version = "0.27", features = ["derive"] }
+strum = { version = "0.28", features = ["derive"] }
 textwrap = "0.16"
 tokio = { version = "1", features = ["full"] }
 tokio-stream = "0.1"
